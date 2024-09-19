@@ -1,0 +1,11 @@
+.navbar{
+    background-color: lightblue;
+}
+.navbarbutton{
+    background-color: lightcyan;
+    color: black;
+}
+.navbarbutton:hover{
+    background-color: cyan;
+    color: white;
+}
