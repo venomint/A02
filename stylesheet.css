@@ -2,27 +2,163 @@
     margin:0;
     padding:0;
 }
+.disabled{
+    pointer-events: none;
+}
+.openingSectionHome{
+    background-color: rgb(110, 202, 233);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: large;
+    height:100vh;
+    width:100%;
+    align-content: center;
+    position:block;
+    transition-duration: 2s;
+    overscroll-behavior-block: contain;
+}
+
 .openingSection{
     background-color: rgb(110, 202, 233);
     color: rgb(255, 255, 255);
     text-align: center;
     font-size: large;
-    height:100px;
-
+    height:25vh;
+    width:100%;
+    align-content: center;   
 }
+#welcome{
+    font-size: 400%;
+    color:rgb(110, 202, 233);
+    margin-top: 2.5%;
+}
+.oval{
+  width: 35%;
+  height: 26vh;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 20px;
+  margin: auto;
+  align-content: center;
+  transition: 0.5s;
+  background-color: rgb(110, 202, 233);
+  color:rgb(255, 255, 255);
+  text-shadow: 3px 3px 3px rgb(224, 255, 255);
+    font-size: 150%;
+}
+a {
+    text-decoration: none;
+}
+.oval h1{
+    font-size:300%;
+}
+.oval:hover h1{
+    display:none;
+}
+.oval:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(110, 202, 233);
+}
+.oval:hover:after{
+    font-size: 300%;
+    content: 'ENTER';
+}
+
 nav{
     background-color: rgb(224, 255, 255);
 }
 .navbarbutton{
     background-color: rgb(224, 255, 255);
-    color: rgb(0, 0, 0);
-    padding-left: 15px;
+    padding: 10px 15px;
     display: inline-block;
-    
+}
+.navbarbutton a{
+    color: rgb(0,0,0);
+    text-decoration: none;
 }
 .navbarbutton:hover{
-    background-color: rgb(0, 0, 0);
-    color: rgb(224, 255, 255);
+    background-color: rgba(110, 202, 233);
+}
+.navbarbutton:hover a{
+    color:rgb(255, 255, 255);
+}
+.breaker{
+    height:auto;
+    margin-top: 2.5%;
+}
+.carosuel{
+    width: 100%;
+    position: static;
+    margin:auto;
+    height: 65vh;
+    margin-top: 5%;
+    background-color: rgb(0,0,0);
+}
+.photoCard{
+    display: none;
+    overflow: hidden;
+    max-height: 65vh;
+    position: absolute;
+    width: 100%;
+    animation: slide;
+    animation-duration: 7s;
+}
+img {
+    width: auto;
+    float:right;
+    height:65vh;
+    min-height: 30vh;
+}
+
+.umbre{
+    animation: darken 7s infinite;
+    border: 15px;
+    position: relative;
+    height:65vh;
+    width:100%;
+    overflow:visible;
+    background-image: linear-gradient(90deg, rgba(0,0,0,1) 0%,  rgba(0,0,0,1)50%, rgba(0,0,0,0.25)75%, rgba(0,0,0,0) 100%);
+}
+.nametext{
+    position: absolute;
+    z-index: 5;
+    top:20%;
+    left:5%;
+    animation: textdarken 7s infinite;
+}
+.photoCard h1{
+    position:absolute;
+    z-index: 5;
+    font-size: 400%;
+    left:15%;
+    animation: textdarken 7s infinite;
+}
+
+@keyframes slide {
+    100%{left: 0;}
+    95%{left:-15px;}
+    90%{left:0;}
+    5% {right:0;}
+    0%{right: -15px;}
+}
+@keyframes darken {
+    100%{background-color: rgba(0,0,0,1);}
+    95%{background-color: rgba(0,0,0,0.25);}
+    94%{background-color: rgba(0,0,0,0);}
+    6%{background-color: rgba(0,0,0,0);}
+    5% {background-color: rgba(0,0,0,0.25);}
+    0%{background-color: rgba(0,0,0,1);}   
+}
+@keyframes textdarken{
+    100%{color: rgba(255, 255, 255, 0);}
+    95%{color: rgba(255, 255, 255, 0.25);}
+    94%{color: rgba(255, 255, 255, 1);}
+    6%{color: rgba(255, 255, 255, 1);}
+    5% {color: rgba(255, 255, 255, 0.75);}
+    3%{color:rgba(255, 255, 255, 0.25);}
+    0%{color: rgba(255, 255, 255, 0);} 
+}
+p.text{
+    margin: 0px 5%;
 }
 .right{
     float:right;
@@ -36,7 +172,11 @@ nav{
     text-align: center;
 
 }
-
+footer{
+    bottom:0;
+    position: block;
+    width:100%;
+}
 .foot{
     height:100px;
     background-color: rgb(224, 255, 255);

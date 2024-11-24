@@ -3,33 +3,99 @@
     <head>
         <title>Blue Base</title>
         <link rel="stylesheet" href = "stylesheet.css">
+        
     </head>
+    
     <header>
-        <div class = "openingSection" style = "padding:5px">
-            <h1>Blue Base</h1>
+        <!--Entering Portion where the screen moves to allow the full website to  be viewed-->
+        <div class = "openingSectionHome" id = "enter" >
+            <button onclick="myFunction() " class = "oval" id="enterButton">
+                <h1>Blue<br>Base</h1>
+            </button>
+            <script>
+                function myFunction(){
+                    document.getElementById('enter').setAttribute("style","height:30vh"); 
+                    document.getElementById('enterButton').classList.add("disabled");
+                    document.getElementById('scrolling').setAttribute("style", "overflow:scroll");
+                }
+            </script>
         </div>
+        <!--Navigation Bar-->
         <nav>
-            <div class = "navbarbutton">
-                <a href="genre.html">Genres</a>
-            </div>
-            <div class = "navbarbutton">
-                <a href = "">Actors</a>
-            </div>
-            <div class = "navbarbutton">
-                <a href="">Country</a>
-            </div>
+            <a href="genre.html">
+                <div class = "navbarbutton">
+                    Genres
+                </div>
+            </a>
+            <a href = "actors.html">
+                <div class = "navbarbutton">
+                    Actors
+                </div>
+            </a>
+            <a href="country.html">
+                <div class = "navbarbutton">
+                    Country
+                </div>
+            </a>
+            <a href="contact.html">
+                <div class = "navbarbutton">
+                    About Us
+                </div>
+            </a>
         </nav>
     </header>
-    <body>
-        <h1 id="welcome">Welcome</h1>
+    <!--Welcome text-->
+    <body id="scrolling" style="overflow: hidden;">
+        <h1 id="welcome">WELCOME</h1>
         
+        <div class="breaker">
+            <p class = "text">
+                This website was designed for avid, or passerby, BL watchers to find a new shows to watch.
+                This could be in a different genre or continue to find similar shows that fit your taste.
+                Whatever you decide to watch, this is the place to look for!
+                <br>
+                <strong>Welcome to BlueBase</strong>
+            </p>
+        </div>
+        <!-- the Carasuel pictures-->
+        <div class = "carosuel">
+            <!-- Full-width images with number and caption text -->
+            <div class="photoCard">
+                <h1 class="numbertext" style="color:rgb(225, 225, 225)">Jack & Joker</h1>
+                <img src="images\Jack-Joker.jpg" alt="Jack & Joker Banner">
+                <p class="nametext" style="color:rgb(225, 225, 225)">Story that tells upon two men who commit crimes and fall in love.</p>
+            </div>
+
+            <div class="photoCard">
+                <h1 class="numbertext" style="color:rgb(225, 225, 225)">The On1y One</h1>
+                <img src="images\onlyone.jpg" alt="Only One of Banner">
+                <p class="nametext" style="color:rgb(225, 225, 225)">A love story between two students.</p>
+            </div>
+            <div class = "umbre"></div>
+        </div>
+
+        <!-- javascript for the carsoul-->
+        <script>
+            let slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("photoCard");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 7000); 
+            }
+        </script>
+        <br>
     </body>
     <footer>
         <div class = "left foot">
         <!--Insert logo here-->
-        <image>
-
-        </image>
         </div>
         <div class ="right foot" >
             <h3>Contact Information</h3>
@@ -41,6 +107,6 @@
                 E-Mail:
             </p>
         </div>
-        <p id="copyright">&copy; Copyright 2024 BlueBase</p>
+        <p id="copyright">&copy;  Jonathan Ocampo IS 117 Section 005 2024</p>
     </footer>
 </html>
