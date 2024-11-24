@@ -2,42 +2,75 @@
 <html>
     <head>
         <title>Blue Base</title>
-        <link rel="stylesheet" href = "stylesheet.css">
+        <link rel="stylesheet" href = "styles/stylesheet.css">
         
     </head>
     
     <header>
         <!--Entering Portion where the screen moves to allow the full website to  be viewed-->
-        <div class = "openingSectionHome" id = "enter" >
-            <button onclick="myFunction() " class = "oval" id="enterButton">
+        <div class = "openingSectionHome" id = "enter" onload="checkCookie()">
+            <button onclick="firstClick() " class = "oval" id="enterButton">
                 <h1>Blue<br>Base</h1>
             </button>
             <script>
+                function firstClick(){
+                    document.getElementById('enter').setAttribute("style","height:30vh"); 
+                    document.getElementById('enterButton').classList.add("disabled");
+                    document.getElementById('scrolling').setAttribute("style", "overflow:scroll");
+                    setCookie("entered", "true", 30);
+                }
                 function myFunction(){
                     document.getElementById('enter').setAttribute("style","height:30vh"); 
                     document.getElementById('enterButton').classList.add("disabled");
                     document.getElementById('scrolling').setAttribute("style", "overflow:scroll");
                 }
+                function setCookie(entered, boolean, expiration){
+                    const data = new Date();
+                    data.setTime(data.getTime() + (expiration * 24 * 60 * 60 * 1000));
+                    let expires = "expires=" + data.toUTCString();
+                    document.cookie = entered + "=" + boolean + ";" + expires + ";path=/";
+                }
+                function getCookie(entered){
+                    let name = entered + "=";
+                    let decodedCookie = decodeURIComponent(document.cookie);
+                    let splitting = decodedCookie.split(';');
+                    for(let i = 0; i<split.length;i++){
+                        let component = splitting[i];
+                        while (component.charAt(0) == ' '){
+                            component = component.substring(1);
+                        }
+                        if(component.indexOf(name) == 0){
+                            return component.substring(name.length, component.length);
+                        }
+                    }
+                    return "";
+                }
+                function checkCookie(){
+                    let enter = getCookie("entered");
+                    if(enter != ''){
+                        myFunction();
+                    }
+                }
             </script>
         </div>
         <!--Navigation Bar-->
         <nav>
-            <a href="genre.html">
+            <a href="pages/genre.html">
                 <div class = "navbarbutton">
                     Genres
                 </div>
             </a>
-            <a href = "actors.html">
+            <a href = "pages/actors.html">
                 <div class = "navbarbutton">
                     Actors
                 </div>
             </a>
-            <a href="country.html">
+            <a href="pages/country.html">
                 <div class = "navbarbutton">
                     Country
                 </div>
             </a>
-            <a href="contact.html">
+            <a href="pages/contact.html">
                 <div class = "navbarbutton">
                     About Us
                 </div>
