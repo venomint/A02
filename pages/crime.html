@@ -2,14 +2,15 @@
 <html>
     <head>
         <title>Blue Base</title>
-        <link rel="stylesheet" href="../styles/pagestylesheet.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="stylesheet" href="../styles/pagestylesheet.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
     <header>
         <div class = "openingSection">
             
-            <h1>About Us</h1>
+            <h1>Crime</h1>
         </div>
          <!--Navigation Bar-->
          <nav id = "compNav">
@@ -24,7 +25,7 @@
                         Genres
                 </a>
                     <ul>
-                        <li><a href="crime.html">Crime</a></li>
+                        <li><a href="#" class="currentInside">Crime</a></li>
                         <li><a>Horror</a></li>
                         <li><a>Supernatural</a></li>
                         <li><a>Slice of Life</a></li>
@@ -41,7 +42,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="contact.html" class="current">
+                    <a href="contact.html">
                         About Us
                     </a>
                 </li>
@@ -51,20 +52,11 @@
     </header>
 
     <body>
-        <p>Thank You So Much!<br>
-        We created this website since many other places do not have such filter methods that we are able to provide for you. Please consider leaving us any suggestions to make down below to make a better place for all of us!</p>
+        <div class="container mt-3">
+            <div class="card img-fluid" style="width:500px">
+              <img class="card-img-top" src="../images/mannerOfDeath.jpg" alt="Card image" style="width:100%">
+            </div>
+          </div>
     </body>
-
-    <form action >
-        <label for ="email">E-Mail</label>
-        <br>
-        <input type ="email" id = "email" name ="email" value = "example@njit.edu">
-        <br>
-        <label for = "suggestion">Suggestion</label>
-        <br>
-        <input type ="text" id = "suggestion" name = "suggestion" value = "Please type suggestion here.">
-        <br>
-        <input type="submit" value="Submit">
-    </form>
 
 </html>

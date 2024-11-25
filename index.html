@@ -3,28 +3,9 @@
     <head>
         <title>Blue Base</title>
         <link rel="stylesheet" href = "styles/stylesheet.css">
-        
-    </head>
-    
-    <header>
-        <!--Entering Portion where the screen moves to allow the full website to  be viewed-->
-        <div class = "openingSectionHome" id = "enter" onload="checkCookie()">
-            <button onclick="firstClick() " class = "oval" id="enterButton">
-                <h1>Blue<br>Base</h1>
-            </button>
-            <script>
-                function firstClick(){
-                    document.getElementById('enter').setAttribute("style","height:30vh"); 
-                    document.getElementById('enterButton').classList.add("disabled");
-                    document.getElementById('scrolling').setAttribute("style", "overflow:scroll");
-                    setCookie("entered", "true", 30);
-                }
-                function myFunction(){
-                    document.getElementById('enter').setAttribute("style","height:30vh"); 
-                    document.getElementById('enterButton').classList.add("disabled");
-                    document.getElementById('scrolling').setAttribute("style", "overflow:scroll");
-                }
-                function setCookie(entered, boolean, expiration){
+        <!-- cookie script-->
+        <script>
+            function setCookie(entered, boolean, expiration){
                     const data = new Date();
                     data.setTime(data.getTime() + (expiration * 24 * 60 * 60 * 1000));
                     let expires = "expires=" + data.toUTCString();
@@ -48,33 +29,69 @@
                 function checkCookie(){
                     let enter = getCookie("entered");
                     if(enter != ''){
-                        myFunction();
+                        document.getElementById('enter').setAttribute("style","height:30vh"); 
+                        document.getElementById('enterButton').classList.add("disabled");
+                        document.getElementById('scrolling').setAttribute("style", "overflow:scroll");
                     }
+                }
+        </script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    
+    <header>
+        <!--Entering Portion where the screen moves to allow the full website to  be viewed-->
+        <div class = "openingSectionHome" id = "enter">
+            <button onclick="firstClick() " class = "oval" id="enterButton"  onload="checkCookie()">
+                <h1>Blue<br>Base</h1>
+            </button>
+            <!--button script functions-->
+            <script>
+                function firstClick(){
+                    document.getElementById('enter').setAttribute("style","height:35vh"); 
+                    document.getElementById('enterButton').classList.add("disabled");
+                    document.getElementById('scrolling').setAttribute("style", "overflow:scroll");
+                    setCookie("entered", "true", 30);
                 }
             </script>
         </div>
         <!--Navigation Bar-->
-        <nav>
-            <a href="pages/genre.html">
-                <div class = "navbarbutton">
-                    Genres
-                </div>
-            </a>
-            <a href = "pages/actors.html">
-                <div class = "navbarbutton">
-                    Actors
-                </div>
-            </a>
-            <a href="pages/country.html">
-                <div class = "navbarbutton">
-                    Country
-                </div>
-            </a>
-            <a href="pages/contact.html">
-                <div class = "navbarbutton">
-                    About Us
-                </div>
-            </a>
+        <nav id = "compNav">
+            <ul>
+                <li>
+                    <a href = "#" class="current">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Genres
+                </a>
+                    <ul>
+                        <li><a href="pages/crime.html">Crime</a></li>
+                        <li><a>Horror</a></li>
+                        <li><a>Supernatural</a></li>
+                        <li><a>Slice of Life</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href = "pages/actors.html">
+                        Actors
+                    </a>
+                </li>
+                <li>
+                    <a href="pages/country.html">
+                        Country
+                    </a>
+                </li>
+                <li>
+                    <a href="pages/contact.html">
+                        About Us
+                    </a>
+                </li>
+            </ul>
+
         </nav>
     </header>
     <!--Welcome text-->
@@ -86,6 +103,8 @@
                 This website was designed for avid, or passerby, BL watchers to find a new shows to watch.
                 This could be in a different genre or continue to find similar shows that fit your taste.
                 Whatever you decide to watch, this is the place to look for!
+                Other words blah blah blah, nyahahahahhahah, hahahhahahaha.
+                Lowkey should've thought about what to write here, but idk if it was really profesionnal to be honest. 
                 <br>
                 <strong>Welcome to BlueBase</strong>
             </p>

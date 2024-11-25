@@ -2,14 +2,19 @@
     margin:0;
     padding:0;
 }
+html{
+    font-family: 'Sour Gummy', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
 .disabled{
     pointer-events: none;
 }
+/* iopening section of the home screen*/
 .openingSectionHome{
     background-color: rgb(110, 202, 233);
     color: rgb(255, 255, 255);
     text-align: center;
-    font-size: large;
+    font-size: 115%;
     height:100vh;
     width:100%;
     align-content: center;
@@ -17,7 +22,13 @@
     transition-duration: 2s;
     overscroll-behavior-block: contain;
 }
+.openingSectionHome h1{
+    font-family: 'Sour Gummy', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
+}
+.openingSectionHome button{
+    height:fit-content
+}
 .openingSection{
     background-color: rgb(110, 202, 233);
     color: rgb(255, 255, 255);
@@ -36,7 +47,7 @@
   width: 35%;
   height: 26vh;
   border: 2px solid rgb(255, 255, 255);
-  border-radius: 20px;
+  border-radius: 2.5%;
   margin: auto;
   align-content: center;
   transition: 0.5s;
@@ -61,30 +72,75 @@ a {
 .oval:hover:after{
     font-size: 300%;
     content: 'ENTER';
+    font-family: 'Sour Gummy', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+/*Navigation css*/
+#compNav{
+    background-color: rgb(224, 255, 255);
+    display: block;
 }
 
-nav{
-    background-color: rgb(224, 255, 255);
+#compNav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position:relative;
 }
-.navbarbutton{
-    background-color: rgb(224, 255, 255);
-    padding: 10px 15px;
-    display: inline-block;
+#compNav ul li{
+    float: left;
+    width:10%;
 }
-.navbarbutton a{
-    color: rgb(0,0,0);
+
+#compNav ul li a{
+    display:block;
+    text-align: center;
+    padding: 1em 0;
     text-decoration: none;
+    background-color: rgb(255, 255, 255);
+    color:rgb(110, 202, 233);
+    border:1px solid rgb(110, 202, 233);
 }
-.navbarbutton:hover{
-    background-color: rgba(110, 202, 233);
+
+#compNav a.current{
+
+    border:1px solid rgb(255, 255, 255);
 }
-.navbarbutton:hover a{
-    color:rgb(255, 255, 255);
+#compNav a:hover{
+    background-color: rgb(224, 255, 255);
+    color:rgb(28, 133, 168);
 }
+#compNav ul ul{
+    display:none;
+    position: absolute;
+    top:100%;
+    width:100%;
+}
+#compNav ul ul li{
+    float: none;
+}
+#compNav ul ul li a{
+    height: 5%;
+    z-index: 1;
+}
+#compNav ul li:hover > ul{
+    display: block;
+}
+#compNav > ul::after{
+    content: "";
+    clear:both;
+    display: block;
+}
+
+body{
+    float:right;
+}
+
 .breaker{
     height:auto;
     margin-top: 2.5%;
 }
+/*carosuel css*/
 .carosuel{
     width: 100%;
     position: static;
@@ -185,4 +241,54 @@ footer{
     text-align: center;
     color:rgb(255, 255, 255);
     background-color: rgb(110, 202, 233);
+}
+
+/*size changer*/
+@media only screen and (max-width:730px){
+	section h1{
+		font-size: 125%;
+	}
+	section h2, aside h2{
+		font-size: 110%;
+	}
+	aside h3 a{
+		font-size:85%;
+	}
+	section{
+		width:95%;
+	}
+
+	
+}
+@media only screen and (max-width:645px){
+	header img{
+		float:none;
+	}
+	header{
+		text-align:center;
+	}
+	section{
+		float:none;
+	}
+	aside{
+		float: none;
+		width:95%;
+		padding-right:2.5%;
+	}
+	img{
+		max-width:30%;
+        min-height: 20%;
+	}
+
+	#compNav{
+		display:none;
+	}
+}
+@media only screen and (max-width:415px){
+	body{
+		font-size: 90%;
+	}
+    .openingSectionHome h1{
+        font-size: 150%;
+    }
 }

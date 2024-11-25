@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-family: 'Sour Gummy', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+/*header css*/
+.openingSection{
+    background-color: rgb(110, 202, 233);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: large;
+    height:25vh;
+    width:100%;
+    align-content: center;   
+}
+
+
+/*Navigation css*/
+#compNav{
+    background-color: rgb(224, 255, 255);
+    display: block;
+}
+
+#compNav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position:relative;
+}
+#compNav ul li{
+    float: left;
+    width:10%;
+}
+
+#compNav ul li a{
+    display:block;
+    text-align: center;
+    padding: 1em 0;
+    text-decoration: none;
+    background-color: rgb(255, 255, 255);
+    color:rgb(110, 202, 233);
+    border:1px solid rgb(110, 202, 233);
+}
+
+#compNav a.current{
+
+    border:1px solid rgb(255, 255, 255);
+}
+#compNav a:hover{
+    background-color: rgb(224, 255, 255);
+    color:rgb(28, 133, 168);
+}
+#compNav ul ul{
+    display:none;
+    position: absolute;
+    top:100%;
+    width:100%;
+}
+#compNav ul ul li{
+    float: none;
+}
+#compNav ul ul li a{
+    height: 5%;
+    z-index: 1;
+}
+#compNav ul li:hover > ul{
+    display: block;
+}
+#compNav > ul::after{
+    content: "";
+    clear:both;
+    display: block;
+}
