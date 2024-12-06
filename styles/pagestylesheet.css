@@ -177,6 +177,17 @@ body h2{
     color:rgb(110, 202, 233);
   }
 
+  footer h1{
+    text-align: center;
+
+}
+
+#copyright{
+    text-align: center;
+    color:rgb(255, 255, 255);
+    background-color: rgb(110, 202, 233);
+}
+
 
   @media only screen and (max-width:572px){
     .flip-card-front img{
