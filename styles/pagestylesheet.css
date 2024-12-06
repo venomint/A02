@@ -227,6 +227,9 @@ body h2{
       width:100% !important;
   
     }
+    .text-center{
+      font-size: 80%;
+    }
     .flip-card-inner{
       height:auto;
       width:100% !important;
