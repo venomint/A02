@@ -256,3 +256,15 @@ footer h1{
         font-size: 200%;
     }
 }
+
+@media only screen and (max-width:350px){
+	.carosuel .photoCard img{
+		max-height:100%;
+	}
+    .photoCard, .umbre, .carosuel{
+        height:20vh;
+    }
+    .openingSectionHome h1{
+        font-size: 175%;
+    }
+}
