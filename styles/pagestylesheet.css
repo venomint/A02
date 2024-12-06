@@ -213,6 +213,11 @@ body h2{
       font-size: 100%;
     }
   }
+  @media only screen and (min-width:574px)  and (max-width:768px){
+    .text-center{
+      font-size: 80%;
+    }
+  }
   @media only screen and (min-width:1000px){
     .text-center{
       font-size: 200%;
@@ -226,9 +231,6 @@ body h2{
       height:auto;
       width:100% !important;
   
-    }
-    .text-center{
-      font-size: 80%;
     }
     .flip-card-inner{
       height:auto;
