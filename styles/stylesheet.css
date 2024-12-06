@@ -257,7 +257,7 @@ footer h1{
     }
 }
 
-@media only screen and (max-width:350px){
+@media only screen and (max-width:400px){
 	.carosuel .photoCard img{
 		max-height:100%;
 	}
