@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Sour Gummy', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 html{
     font-family: 'Sour Gummy', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -73,3 +74,148 @@ html{
     clear:both;
     display: block;
 }
+
+/*text centering*/
+body h2{
+  margin-top: 1.5rem;
+  text-align: center;
+  color:rgb(110, 202, 233);
+}
+.context{
+  align-content: center;
+  width: 75%;
+  left:12.5%;
+  position: relative;
+}
+/*Flip over cards*/
+.container{
+  row-gap: 1.25rem !important;
+}
+.flip-card {
+    background-color: transparent;
+    min-width:20vh;
+    max-width: fit-content !important;
+    height: min-content;
+    perspective: 1000px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: relative;
+    width: 25vh;
+    height: 25vh;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .flip-card-front img{
+    height:auto;
+    width:100%;
+    object-fit: contain;
+
+  }
+  
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+    height: auto;
+  }
+  
+  .flip-card-back {
+    background-color: rgba(0,0,0);
+    color: white;
+    transform: rotateY(180deg);
+    height: auto;
+    width: auto;
+  }
+
+  .card{
+    height: 50%;
+    border:none !important;
+    margin:0 !important;
+  }
+
+
+  .text-center{
+    max-height: max-content;
+  }
+  /*form formatting*/
+  .suggestionForm{
+    margin-left: 15%;
+    width:70%;
+  }
+  .suggestionForm label{
+    font-size: 125%;
+    font-weight: 500;
+  }
+  .suggestionForm .suggestion, #email{
+    width: 100%;
+  }
+
+  .suggestionForm .submit_button{
+    background-color: rgb(110, 202, 233);
+    border:2px rgb(28, 133, 168) solid;
+    padding: 0.25rem 0.5rem;
+    color:rgb(255, 255, 255);
+    border-radius: 10%;
+    margin: auto;
+  }
+  input[type="submit"]:hover{
+    background-color: rgb(255, 255, 255);
+    color:rgb(110, 202, 233);
+  }
+
+
+  @media only screen and (max-width:572px){
+    .flip-card-front img{
+      height:auto;
+      width:150% !important;
+  
+    }
+    .flip-card-inner{
+      height:auto;
+      width:150% !important;
+  
+    }
+    .text-center{
+      font-size: 150% !important;
+    }
+
+  }
+  @media only screen and (max-width:700px){
+    .text-center{
+      font-size: 100%;
+    }
+  }
+  @media only screen and (min-width:1000px){
+    .text-center{
+      font-size: 200%;
+    }
+  }
+  @media only screen and (min-width:574px){
+    .flip-card{
+      margin-left: 0;
+    }
+    .flip-card-front img{
+      height:auto;
+      width:100% !important;
+  
+    }
+    .flip-card-inner{
+      height:auto;
+      width:100% !important;
+    }
+
+  }

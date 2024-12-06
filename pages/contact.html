@@ -2,9 +2,17 @@
 <html>
     <head>
         <title>Blue Base</title>
-        <link rel="stylesheet" href="../styles/pagestylesheet.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--fonts-->
+        <link rel="stylesheet" href="../styles/pagestylesheet.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <!-- nav Bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <meta charset="utf-8">
     </head>
     <header>
         <div class = "openingSection">
@@ -12,59 +20,69 @@
             <h1>About Us</h1>
         </div>
          <!--Navigation Bar-->
-         <nav id = "compNav">
-            <ul>
-                <li>
-                    <a href = "../index.html">
-                        Home
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        Genres
-                </a>
-                    <ul>
-                        <li><a href="crime.html">Crime</a></li>
-                        <li><a>Horror</a></li>
-                        <li><a>Supernatural</a></li>
-                        <li><a>Slice of Life</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href = "actors.html">
-                        Actors
-                    </a>
-                </li>
-                <li>
-                    <a href="country.html">
-                        Country
-                    </a>
-                </li>
-                <li>
-                    <a href="contact.html" class="current">
-                        About Us
-                    </a>
-                </li>
-            </ul>
+         <nav class="navbar navbar-expand-md
+                    justify-content-start
+                    bg-dark navbar-dark
+                    col-12">
 
-        </nav>
+                <!-- Brand -->
+                <a class="navbar-brand" href="../index.html">BlueBase</a>
+                <!-- Responsive Button for the smaller menu -->
+                <button class="navbar-toggler" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <!-- Links -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop"
+                               data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                                Genres
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="crime.html">Crime</a>
+                                <a class="dropdown-item" href="#">Slice of Life</a>
+                                <a class="dropdown-item" href="#">Horror</a>
+                                <a class="dropdown-item" href="#">Game</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="actors.html">Actors</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="country.html">Country</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
     </header>
 
     <body>
-        <p>Thank You So Much!<br>
-        We created this website since many other places do not have such filter methods that we are able to provide for you. Please consider leaving us any suggestions to make down below to make a better place for all of us!</p>
-    </body>
+        <h2>Thank You So Much!</h2>
+        <div class = "context"><p>We created this website since many other places do not have such filter methods that we are able to provide for you. Please consider leaving us any suggestions to make down below to make a better place for all of us!</p></div>
 
-    <form action >
-        <label for ="email">E-Mail</label>
-        <br>
-        <input type ="email" id = "email" name ="email" value = "example@njit.edu">
-        <br>
-        <label for = "suggestion">Suggestion</label>
-        <br>
-        <input type ="text" id = "suggestion" name = "suggestion" value = "Please type suggestion here.">
-        <br>
-        <input type="submit" value="Submit">
-    </form>
+        <div class = "suggestionForm">
+            <form>
+                <label for ="email">E-Mail</label>
+                <br>
+                <input type ="email" id = "email" name ="email" placeholder = "example@njit.edu" pattern="[A-Za-z1-9._\-]+@[a-z]+\.[a-z]+" >
+                <br>
+                <label for = "suggestion">Suggestion</label>
+                <br>
+                <textarea name = "suggestion" placeholder = "Please type suggestion here." class="suggestion"></textarea>
+                <br>
+                <input type="submit" placeholder="Submit" class="submit_button" >
+            </form>
+        </div>
+
+
+        <!--copied from bootstrap page-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+    </body>
 
 </html>

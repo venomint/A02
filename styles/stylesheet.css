@@ -1,10 +1,10 @@
 *{
     margin:0;
     padding:0;
+    font-family: 'Sour Gummy', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif !important;
+
 }
-html{
-    font-family: 'Sour Gummy', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
+
 
 .disabled{
     pointer-events: none;
@@ -76,61 +76,15 @@ a {
 
 }
 /*Navigation css*/
-#compNav{
-    background-color: rgb(224, 255, 255);
-    display: block;
+.navbar-brand{
+    padding-left:0.4125rem;
 }
-
-#compNav ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    position:relative;
-}
-#compNav ul li{
-    float: left;
-    width:10%;
-}
-
-#compNav ul li a{
-    display:block;
-    text-align: center;
-    padding: 1em 0;
-    text-decoration: none;
-    background-color: rgb(255, 255, 255);
+.navbar-brand p{
+    
     color:rgb(110, 202, 233);
-    border:1px solid rgb(110, 202, 233);
+    text-shadow: 3px 3px 3px rgb(224, 255, 255); 
 }
 
-#compNav a.current{
-
-    border:1px solid rgb(255, 255, 255);
-}
-#compNav a:hover{
-    background-color: rgb(224, 255, 255);
-    color:rgb(28, 133, 168);
-}
-#compNav ul ul{
-    display:none;
-    position: absolute;
-    top:100%;
-    width:100%;
-}
-#compNav ul ul li{
-    float: none;
-}
-#compNav ul ul li a{
-    height: 5%;
-    z-index: 1;
-}
-#compNav ul li:hover > ul{
-    display: block;
-}
-#compNav > ul::after{
-    content: "";
-    clear:both;
-    display: block;
-}
 
 body{
     float:right;
@@ -163,6 +117,7 @@ img {
     float:right;
     height:65vh;
     min-height: 30vh;
+    min-width: 10vh;
 }
 
 .umbre{
@@ -180,13 +135,17 @@ img {
     top:20%;
     left:5%;
     animation: textdarken 7s infinite;
+    width:40%;
+    text-align: center;
+
 }
 .photoCard h1{
     position:absolute;
     z-index: 5;
     font-size: 400%;
-    left:15%;
+    text-align: center;
     animation: textdarken 7s infinite;
+    width:55%;
 }
 
 @keyframes slide {
@@ -228,15 +187,11 @@ p.text{
     text-align: center;
 
 }
-footer{
-    bottom:0;
-    position: block;
-    width:100%;
+footer h1{
+    text-align: center;
+
 }
-.foot{
-    height:100px;
-    background-color: rgb(224, 255, 255);
-}
+
 #copyright{
     text-align: center;
     color:rgb(255, 255, 255);
@@ -244,51 +199,60 @@ footer{
 }
 
 /*size changer*/
-@media only screen and (max-width:730px){
-	section h1{
-		font-size: 125%;
-	}
-	section h2, aside h2{
-		font-size: 110%;
-	}
-	aside h3 a{
-		font-size:85%;
-	}
-	section{
-		width:95%;
+@media only screen and (max-width:1000px){
+    .carosuel .photoCard img{
+		max-height:100%;
 	}
 
+    .photoCard, .umbre, .carosuel{
+        height:55vh;
+    }
+    .openingSectionHome h1{
+        font-size: 250%;
+    }
+    .photoCard h1{
+        font-size: 350%;
+    }
+    .photoCard .nametext{
+        font-size: 100%;
+    }
+}
+
+@media only screen and (max-width:850px){
+    .photoCard, .umbre, .carosuel{
+        height:45vh;
+    }
+    .carosuel .photoCard img{
+		max-height:100%;
+	}
+    .openingSectionHome h1{
+        font-size: 250%;
+    }
+    .photoCard h1{
+        font-size: 200%;
+    }
+    .photoCard .nametext{
+        font-size: 80%;
+    }
 	
 }
 @media only screen and (max-width:645px){
-	header img{
-		float:none;
+	.carosuel .photoCard img{
+		max-height:100%;
 	}
-	header{
-		text-align:center;
-	}
-	section{
-		float:none;
-	}
-	aside{
-		float: none;
-		width:95%;
-		padding-right:2.5%;
-	}
-	img{
-		max-width:30%;
-        min-height: 20%;
-	}
-
-	#compNav{
-		display:none;
-	}
-}
-@media only screen and (max-width:415px){
-	body{
-		font-size: 90%;
-	}
+    .photoCard, .umbre, .carosuel{
+        height:30vh;
+    }
     .openingSectionHome h1{
+        font-size: 200%;
+    }
+    .photoCard h1{
         font-size: 150%;
+    }
+    .photoCard .nametext{
+        font-size: 50%;
+    }
+    .oval:hover:after{
+        font-size: 200%;
     }
 }
