@@ -195,6 +195,9 @@ body h2{
       width:150% !important;
   
     }
+    .card-columns{
+      margin-left: 5rem;
+    }
     .flip-card-inner{
       height:auto;
       width:150% !important;
